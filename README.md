@@ -50,7 +50,7 @@ Problem: Understanding how to "tap into" data properties (e.g., data._id vs resu
 
 Solution: Learned that result is the entire array (the "carton"), while data is the placeholder for the specific object (the "egg") currently inside the loop. I used console.log to inspect the "keys" provided by the API (like MongoDB's _id or Adzuna's company_name).
 
-2. The "Gatekeeper" (Conditional Logic)
+2. (Conditional Logic)
 Problem: The confirm() dialog was appearing, but the item was being deleted regardless of the user's choice.
 
 Solution: Implemented Boolean logic. Captured the result of confirm() in a variable and wrapped the fetch request in an if statement to ensure the action only proceeds if the user clicks "OK."
