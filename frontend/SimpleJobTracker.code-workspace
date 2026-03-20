@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../myTimeStampApp"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SimpleJobTracker"
+	}
+}
