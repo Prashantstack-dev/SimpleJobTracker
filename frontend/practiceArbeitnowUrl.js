@@ -1,4 +1,4 @@
-export const url = "https://www.arbeitnow.com/api/job-board-api";
+export const url = "https://simplejobtracker-yaoq.onrender.com/api/jobs";
 
 async function getJobData() {
   try {

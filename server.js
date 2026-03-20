@@ -42,6 +42,15 @@ app.get("/", (req,res)=> {
     res.send("<h1>API running....</h1>");
 })
 
+app.get('/api/jobs', async (req, res) => {
+  try {
+    const response = await fetch('https://www.arbeitnow.com/api/job-board-api')
+    const data = await response.json()
+    res.json(data)
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch jobs' })
+  }
+})
 app.listen(port, ()=> {
     console.log(`Server is running on port ${port}`)
 })
