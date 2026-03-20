@@ -13,7 +13,7 @@ const cors = require('cors');
 app.use(cors()); // This allows your frontend to talk to your backend
 async function connectMongoose() {
 try {
-  await mongoose.connect(process.env.MONGODB_URI);
+  await mongoose.connect('mongodb+srv://hantp4585:Hantp2026@jobapplication.dh34bwk.mongodb.net/jobtracker?retryWrites=true&w=majority&appName=JobApplication');
   console.log("MongoDB Connected...");
 } catch (err) {
   console.error("Failed to connect to MongoDB:", err);
