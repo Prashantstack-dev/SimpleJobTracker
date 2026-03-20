@@ -1,4 +1,6 @@
-require('dotenv').config(); // to load .env file
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+} // to load .env file
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -11,7 +13,7 @@ const cors = require('cors');
 app.use(cors()); // This allows your frontend to talk to your backend
 async function connectMongoose() {
 try {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGODB_URI);
   console.log("MongoDB Connected...");
 } catch (err) {
   console.error("Failed to connect to MongoDB:", err);
